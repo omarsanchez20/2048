@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>2048</title>
-        
-        <link rel="stylesheet" href="../wwwroot/css/juego.css">
-        <script src="../wwwroot/js/juego.js"></script>
-    </head>
-
-    <body>
-        <h1>2048</h1>
-        <hr>
-        <h2>Score: <span id="score">0</span></h2>
-        <div id="board">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../wwwroot/css/juego.css">
+    
+    
+</head>
+<body>
+    <h1>2048</h1>
+    <hr>
+    <div id="board">
+    </div>
+    <div class="score-container">
+        <div class="score-panel">
+            <h2>Score: <span id="score">0</span></h2>
         </div>
-        
-    </body>
+        <div class="retry-icon">
+            <i class="fas fa-redo"></i> <!-- Icono de reintentar -->
+        </div>
+        <div class="high-score-panel">
+            <h2>High Score: <span id="high-score">0</span></h2>
+        </div>
+    </div>
+
+    <div class="board-controls">
+        <button class="control-btn"><i class="fas fa-arrow-up"></i></button>
+    </div>
+    <div class="board-controls">
+        <button class="control-btn"><i class="fas fa-arrow-left"></i></button>
+        <button class="control-btn"><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div class="board-controls">
+        <button class="control-btn"><i class="fas fa-arrow-down"></i></button>
+    </div>
+
+    <div class="footer-icons">
+        <div class="play-icon">
+            <i class="fas fa-play"></i> <!-- Icono de play -->
+        </div>
+        <div class="stats-icon">
+            <i class="fas fa-chart-bar"></i> <!-- Icono de estadísticas -->
+        </div>
+        <div class="check-icon">
+            <i class="fas fa-check"></i> <!-- Icono de palomita -->
+        </div>
+    </div>
+    <div id="menu-sonido">
+        <button id="activar-sonido">Activar sonido</button>
+        <button id="desactivar-sonido">Desactivar sonido</button>
+      </div>
+
+
+      <script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+      <script src="../wwwroot/js/juego.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+      <script src="../wwwroot/js/sound.js"></script>
+</body>
 </html>

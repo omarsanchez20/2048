@@ -37,6 +37,62 @@ hr {
     align-items: center;
 }
 
+/*estilos de iconos y panel*/
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.score-panel, .high-score-panel {
+    display: inline-block;
+    padding: 10px 20px; /* Ajustar el relleno */
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo con transparencia */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.retry-icon {
+    display: inline-block;
+    font-size: 40px;
+   
+    
+}
+.footer-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar verticalmente los iconos */
+    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.3); /* Color gris transparente */
+    padding: 20px; /* Aumentar el espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+.footer-icons i {
+    font-size: 24px; /* Aumentar el tamaño de los iconos */
+    margin: 0 10px; /* Ajustar el margen entre los iconos */
+}
+
+
+
+.board-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.control-btn {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
 
 /* colored tiles */
 
