@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ArcadeClassic&display=swap">
     <link rel="stylesheet" href="../wwwroot/css/estilo.css">
     <link rel="stylesheet" href="../wwwroot/css/juego.css">
+    <link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/">
 </head>
 <body>
 
@@ -25,7 +26,8 @@
             <input type="text" id="username" class="username-input" placeholder="Enter your username">
         </div>
     </div>
-
+    
+    <div class="container-sm">
     <div id="juego" style="display: none;">
         <h1>2048</h1>
         <div id="menu-sonido">
@@ -53,20 +55,17 @@
                 <h2>High Score: <span id="high-score">0</span></h2>
             </div>
         </div>
-
-        <div class="footer-icons">
-            <div class="play-icon">
-                <i class="fas fa-play"></i> <!-- Icono de play -->
-            </div>
-            <div class="stats-icon">
-                <i class="fas fa-chart-bar"></i> <!-- Icono de estadísticas -->
-            </div>
-            <div class="check-icon">
-                <i class="fas fa-check"></i> <!-- Icono de palomita -->
-            </div>
-        </div>
+        
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+              </div>
+            </nav>
+          </div>
         
     </div>
+</div>
 
     <script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
     <script src="../wwwroot/js/juego.js"></script>
@@ -84,6 +83,8 @@
         function abrirPagina(url) {
             window.open(url, '_blank');
         }
+
+        
     </script>
 
 </body>
