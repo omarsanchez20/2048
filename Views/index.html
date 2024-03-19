@@ -1,31 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../wwwroot/css/estilo.css">
+    <title>2048 - Menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ArcadeClassic&display=swap">
-
-
-    <title>2048 - Menu</title>
+    <link rel="stylesheet" href="../wwwroot/css/estilo.css">
+    <link rel="stylesheet" href="../wwwroot/css/juego.css">
 </head>
 <body>
+
+    
+
     <div class="menu-container">
         <h1 class="game-title">2048</h1>
+     
         <img src="../wwwroot/img/portada.png" alt="2048 Game" class="game-image">
 
-        <a href="juego.html" class="new-game-btn">New Game</a><br>
-
+        <a href="#" onclick="mostrarJuego()" class="new-game-btn">New Game</a><br>
 
         <div class="username-container">
             <label for="username" class="username-label">Username:</label><br>
             <input type="text" id="username" class="username-input" placeholder="Enter your username">
         </div>
-        <div class="settings-bar">
-            <a href="Marcadores.html" target="_blank"><i class="fas fa-cog settings-icon"></i></a>
-            <a href="Configuracion.html" target="_blank"><i class="fas fa-trophy stats-icon"></i></a>
-        </div>
     </div>
+
+    <div id="juego" style="display: none;">
+        <h1>2048</h1>
+        <div id="menu-sonido">
+            <h5 style="color: greenyellow;">Musica</h5>
+            <button id="activar-sonido">
+                <img src="../wwwroot/lib/bootstrap-icons/icons/toggle-on.svg" alt="Activar sonido" width="24" height="24" style="vertical-align: middle;">
+                
+            </button>
+            <button id="desactivar-sonido">
+                <img src="../wwwroot/lib/bootstrap-icons/icons/toggle-off.svg" alt="Desactivar sonido" width="24" height="24" style="vertical-align: middle;">
+                
+            </button>
+        </div>
+        <hr>
+        <div id="board">
+        </div>
+        <div class="score-container">
+            <div class="score-panel">
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+            <div class="retry-icon">
+                <i class="fas fa-redo"></i> <!-- Icono de reintentar -->
+            </div>
+            <div class="high-score-panel">
+                <h2>High Score: <span id="high-score">0</span></h2>
+            </div>
+        </div>
+
+        <div class="footer-icons">
+            <div class="play-icon">
+                <i class="fas fa-play"></i> <!-- Icono de play -->
+            </div>
+            <div class="stats-icon">
+                <i class="fas fa-chart-bar"></i> <!-- Icono de estadísticas -->
+            </div>
+            <div class="check-icon">
+                <i class="fas fa-check"></i> <!-- Icono de palomita -->
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="../wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../wwwroot/js/juego.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="../wwwroot/js/sound.js"></script>
+
+    <script>
+        function mostrarJuego() {
+            var menu = document.querySelector('.menu-container');
+            var juego = document.getElementById('juego');
+            menu.style.display = 'none';
+            juego.style.display = 'block';
+        }
+
+        function abrirPagina(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+
 </body>
 </html>
