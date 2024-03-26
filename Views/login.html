@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game - Login</title>
+    <link href="../wwwroot/css/login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/2048_logo.svg" alt="Logo" class="img-fluid">
+        </div>
+        <h2 class="text-center h2-custom">Inicia sesión</h2>
+
+        <form>
+            <div class="mb-3">
+                <input type="email" class="form-control input-custom" id="email" placeholder="Correo electrónico">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control input-custom" id="password" placeholder="Contraseña">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-custom">Iniciar sesión</button>
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <p>¿Aún no tienes una cuenta? <a href="register.html" class="link-custom">Regístrate aquí</a></p>
+            <p>O inicia sesión con:</p>
+            <a href="#" class="social-icon">
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" class="img-fluid social-logo">
+            </a>
+            <a href="#" class="social-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="img-fluid social-logo">
+            </a>
+        </div>
+    </div>
+
+    <script src="../wwwroot/js/login.js"></script>
+</body>
+</html>

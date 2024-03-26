@@ -1,0 +1,94 @@
+body {
+    background-color: #f2f2f2; 
+    color: #333; 
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
+.container {
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparencia para que la imagen de fondo sea visible */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.h2-custom {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;  /* Cambiado a #333 para mayor contraste */
+    font-weight: 700;
+}
+.input-custom {
+    background-color: #ffffff; 
+    border: 1px solid #b0b0b0;  /* Cambiado a borde sólido para mayor claridad */
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    color: #333;  /* Cambiado a #333 para mayor contraste */
+    transition: border-color 0.3s ease-in-out;  /* Transición suave para el borde */
+}
+
+/* Estilo para el input cuando está enfocado */
+.input-custom:focus {
+    border-color: #7dadd3;  /* Cambiado a color de resaltado */
+    outline: none;  /* Eliminar el contorno predeterminado */
+}
+
+.btn-custom {
+    background-color: #333;  /* Cambiado a #333 para mayor contraste */
+    border-color: #333;  /* Cambiado a #333 para mayor contraste */
+    color: #ffffff; 
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-custom:hover {
+    background-color: #000;  /* Cambiado a #000 para mayor contraste */
+    border-color: #000;  /* Cambiado a #000 para mayor contraste */
+    transform: scale(1.05);
+}
+.link-custom {
+    color: #7dadd3; 
+}
+.image-container {
+    margin-bottom: 20px;
+}
+.social-icon {
+    margin: 10px;
+    padding: 10px;
+}
+.social-logo {
+    height: 40px; 
+    vertical-align: middle;
+}
+.image-container img{
+    width: 150px;
+}
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Para que la imagen de fondo esté detrás del contenido */
+    transition: opacity 1s ease-in-out;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+

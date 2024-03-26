@@ -1,178 +1,129 @@
+/* Estilos generales */
 body {
-    font-family: 'ArcadeClassic', cursive;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background: rgb(36, 58, 105);
+    background: #f2f2f2;
+    color: #333;
+    padding: 20px;
+    margin: 0;
 }
 
 h1 {
     font-size: 48px;
-    color: white;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 hr {
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #board {
-    width: 400px;
-    height: 400px;
-
-    background-color: #cdc1b5;
-    border: 6px solid rgb(2, 27, 50);
+    max-width: 90vw;
+    width: 300px;
+    height: auto;
+    background-color: #e0e0e0;
     border-radius: 15px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .tile {
-    width: 90px;
-    height: 90px;
-    border: 5px solid rgb(2, 27, 50);
-
-    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    border: 5px solid #b0b0b0;
+    font-size: 24px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 4px;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+    
 }
 
-
-#menu-sonido {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-#menu-sonido button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-#menu-sonido button:hover {
-    opacity: 0.7;
-}
-
-
-/*estilos de iconos y panel*/
-
+/* Estilos para los paneles de puntuación */
 .score-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
+
 .score-panel, .high-score-panel {
-    display: inline-block;
-    padding: 10px 20px; /* Ajustar el relleno */
-    border-radius: 20px; /* Bordes redondeados */
-    background-color: rgba(0, 0, 0, 0.1); /* Color de fondo con transparencia */
-    margin-left: 100px;
-    margin-right: 100px;
-}
-.retry-icon {
-    display: inline-block;
-    font-size: 40px;
-   
-    
-}
-.footer-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Centrar verticalmente los iconos */
-    margin-top: 20px;
-    background-color: rgba(128, 128, 128, 0.3); /* Color gris transparente */
-    padding: 20px; /* Aumentar el espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-}
-.footer-icons i {
-    font-size: 24px; /* Aumentar el tamaño de los iconos */
-    margin: 0 10px; /* Ajustar el margen entre los iconos */
-}
-
-
-
-.board-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.control-btn {
-    font-size: 24px;
+    flex: 0 1 auto;
     padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
 }
 
+.score-panel h2, .high-score-panel h2 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.score-panel span, .high-score-panel span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.retry-icon {
+    font-size: 32px;
+}
+
+/* Estilos para el botón de reinicio */
+.retry-icon {
+    flex: 0 0 auto;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.retry-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Consulta de medios para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .score-panel, .high-score-panel {
+        font-size: 14px;
+    }
+
+    .score-panel h2, .high-score-panel h2 {
+        font-size: 16px;
+    }
+
+    .score-panel span, .high-score-panel span {
+        font-size: 14px;
+    }
+}
 
 /* colored tiles */
-
-.x2 {
-    background-color: #eee4da;
-    color: #727371;
-}
-
-.x4 {
-    background-color: #ece0ca;
-    color: #727371;
-}
-
-.x8 {
-    background-color: #f4b17a;
-    color: white;
-}
-
-.x16{
-    background-color: #f59575;
-    color: white;
-}
-
-.x32{
-    background-color: #f57c5f;
-    color: white;
-}
-
-.x64{
-    background-color: #f65d3b;
-    color: white;
-}
-
-.x128{
-    background-color: #edce71;
-    color: white;
-}
-
-.x256{
-    background-color: #edcc63;
-    color: white;
-}
-
-.x512{
-    background-color: #edc651;
-    color: white;
-}
-
-.x1024{
-    background-color: #eec744;
-    color: white;
-}
-
-.x2048{
-    background-color: #ecc230;
-    color: white;
-}
-
-.x4096 {
-    background-color: #fe3d3d;
-    color: white;
-}
-
-.x8192 {
-    background-color: #ff2020;
-    color: white;
-}
+.x2 { background-color: #7dadd3; }
+.x4 { background-color: #7dadd3; }
+.x8 { background-color: #7dadd3; }
+.x16 { background-color: #406c8e; }
+.x32 { background-color: #406c8e; }
+.x64 { background-color: #406c8e; }
+.x128 { background-color: #3d4652; }
+.x256 { background-color: #3d4652; }
+.x512 { background-color: #3d4652; }
+.x1024 { background-color: #1a181c; }
+.x2048 { background-color: #1a181c; }

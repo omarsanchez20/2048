@@ -1,54 +1,52 @@
-/* Estilos personalizados */
+/* Estilos generales */
 body {
-    background-color: #fcfcfe;
-    color: #1a181c;
-    padding-top: 50px;
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333; /* Color de fondo oscuro */
+    color: #ffffff; /* Texto en blanco */
 }
 
 .container {
-    max-width: 500px;
-    margin: auto;
+    position: relative; /* Para que el contenido quede encima del fondo */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1638561186238-3227892dbc18?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Nueva imagen estática del juego */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Opacidad del fondo */
+    z-index: -1; /* Fondo detrás del contenido */
 }
 
 .h2-custom {
-    font-size: 40px;
-    color: #1a181c;
-    margin-bottom: 40px;
+    font-size: 48px;
+    color: #ffcc00; /* Texto en amarillo */
 }
 
-.image-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+.lead {
+    color: #ffffff; /* Texto en blanco */
 }
 
 .btn-custom {
-    background-color: #3d4652;
-    border-color: #3d4652;
-    color: #fcfcfe;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+    background-color: #ffcc00; /* Color amarillo */
+    border-color: #ffcc00;
+    color: #333; /* Texto en fondo oscuro */
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    width: 100%;
-    max-width: 200px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
 }
 
 .btn-custom:hover {
-    background-color: #7dadd3;
-    border-color: #7dadd3;
+    background-color: #ffdb4d; /* Color amarillo más claro */
+    border-color: #ffdb4d;
 }
 
-.btn-custom:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.25rem #406c8e;
-}
-
-.btn-custom.btn-sm {
-    padding: 10px 20px;
-    font-size: 14px;
+.social-link {
+    font-size: 24px;
+    color: #ffffff; /* Texto en blanco */
+    margin: 0 5px;
 }

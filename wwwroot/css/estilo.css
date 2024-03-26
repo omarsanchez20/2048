@@ -1,9 +1,9 @@
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'ArcadeClassic', cursive;
-
-    background-color: rgb(36, 58, 105);
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
 }
 
 .menu-container {
@@ -11,95 +11,97 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    padding: 20px; /* Añadido espacio alrededor del contenedor */
 }
 
 .game-title {
-    color: white;
-    font-size: 80px; 
-    margin-bottom: 2px; 
-    margin-top: 2px; 
+    color: #333; /* Color de texto */
+    font-size: 72px; /* Tamaño del título */
+    margin-bottom: 30px; /* Margen inferior */
+    text-align: center; /* Centrar el texto */
+    font-family: 'Impact', sans-serif; /* Fuente Impact */
+    font-weight: bold; /* Peso de la fuente */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
 }
+
 
 .game-image {
     margin-top: 20px;
-    width: 200px; 
+    width: 250px; /* Aumento del tamaño de la imagen */
     height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .new-game-btn {
-    background-color: rgb(244, 244, 242);
-    color: rgb(36, 58, 105);
-    padding: 10px 20px;
-    font-size: 22px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 40px; /* Aumento del relleno */
+    font-size: 24px; /* Tamaño del texto aumentado */
     border: none;
-    border-radius: 40px;
-    margin-top: 20px;
+    border-radius: 25px; /* Bordes redondeados */
+    margin-top: 30px; /* Aumento del margen superior */
     cursor: pointer;
-    font-family: 'ArcadeClassic', cursive;
-    font-weight: bold; 
     text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .new-game-btn:hover {
-    background-color: rgba(244, 244, 242, 0.8);
+    background-color: #555;
 }
 
 .username-container {
     margin-top: 20px;
-    position: relative; 
-    text-align: center; 
+    text-align: center;
 }
 
 .username-label {
-    color: black;
-    position: absolute; 
-    top: -20px;
-    left: 50%; 
-    transform: translateX(-50%); 
-    font-size: 20px;
-    font-weight: bold; 
+    color: #333;
+    font-size: 20px; /* Tamaño de la etiqueta aumentado */
+    font-weight: bold;
 }
 
 .username-input {
-    background-color: rgb(244, 244, 242);
-    padding: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
     border: none;
-    border-radius: 40px;
-    margin-top: 5px;
-    width: 200px; 
-    text-align: center; 
-    font-family: 'ArcadeClassic', cursive;
-    font-size: 20px; 
-    font-weight: bold; 
-    text-transform: uppercase; 
+    border-radius: 25px;
+    margin-top: 10px;
+    width: 250px; /* Aumento del ancho del campo de entrada */
+    text-align: center;
+    font-size: 20px; /* Tamaño del texto de entrada aumentado */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.settings-bar {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(154, 170, 171, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: space-between;
+/* Consulta de medios para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    .game-title {
+        font-size: 36px; /* Tamaño del título para dispositivos móviles */
+    }
+
+    .game-image {
+        width: 200px; /* Reducción del tamaño de la imagen para dispositivos móviles */
+    }
+
+    .new-game-btn {
+        padding: 12px 30px; /* Reducción del relleno del botón para dispositivos móviles */
+        font-size: 18px; /* Tamaño del texto del botón para dispositivos móviles */
+        border-radius: 20px; /* Bordes redondeados */
+        margin-top: 20px; /* Aumento del margen superior para dispositivos móviles */
+    }
+
+    .username-label {
+        font-size: 16px; /* Tamaño de la etiqueta para dispositivos móviles */
+    }
+
+    .username-input {
+        padding: 8px 16px; /* Reducción del relleno del campo de entrada para dispositivos móviles */
+        border-radius: 20px; /* Bordes redondeados */
+        margin-top: 5px;
+        width: 200px; /* Reducción del ancho del campo de entrada para dispositivos móviles */
+        font-size: 16px; /* Tamaño del texto de entrada para dispositivos móviles */
+    }
 }
-
-.settings-icon, .stats-icon {
-    font-size: 40px; 
-    margin-bottom: 10px; 
-    color: white; 
-}
-
-.settings-icon {
-    background-color: rgb(154, 194, 213);
-}
-
-.stats-icon {
-    background-color: rgb(225, 171, 49);
-}
-
-
