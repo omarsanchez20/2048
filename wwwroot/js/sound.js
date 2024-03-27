@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para inicializar el sonido
     function inicializarSonido() {
         sound = new Howl({
-            src: ['../../wwwroot/sounds/stranger-things.mp3'], // Ruta del archivo de audio
+            src: ['../wwwroot/sounds/stranger-things.mp3'], // Ruta del archivo de audio
             autoplay: false, // No reproducir automáticamente al cargar
             loop: true, // Repetir el sonido
             volume: 0.5 // Volumen inicial

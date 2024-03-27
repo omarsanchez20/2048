@@ -8,39 +8,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ArcadeClassic&display=swap">
     <link rel="stylesheet" href="../wwwroot/css/estilo.css">
     <link rel="stylesheet" href="../wwwroot/css/juego.css">
-    <link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/">
 </head>
 <body>
 
-    
-
-    <div class="menu-container">
-        <h1 class="game-title">2048</h1>
-     
-        <img src="../wwwroot/img/portada.png" alt="2048 Game" class="game-image">
-
-        <a href="#" onclick="mostrarJuego()" class="new-game-btn">New Game</a><br>
-
-        <div class="username-container">
-            <label for="username" class="username-label">Username:</label><br>
-            <input type="text" id="username" class="username-input" placeholder="Enter your username">
-        </div>
-    </div>
-    
-
-    
     <div class="container-sm">
-    <div id="juego" style="display: none;">
+    <div id="juego">
         <h1>2048</h1>
         <div id="menu-sonido">
             <h5 style="color: greenyellow;">Musica</h5>
             <button id="activar-sonido">
                 <img src="../wwwroot/lib/bootstrap-icons/icons/toggle-on.svg" alt="Activar sonido" width="24" height="24" style="vertical-align: middle;">
-                
             </button>
             <button id="desactivar-sonido">
                 <img src="../wwwroot/lib/bootstrap-icons/icons/toggle-off.svg" alt="Desactivar sonido" width="24" height="24" style="vertical-align: middle;">
-                
             </button>
         </div>
         <hr>
@@ -58,13 +38,7 @@
             </div>
         </div>
         
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-              </div>
-            </nav>
-          </div>
+        <object type="text/html" data="nav-bar.html" style="width: 100%; border: none"></object>
         
     </div>
 </div>
@@ -73,21 +47,6 @@
     <script src="../wwwroot/js/juego.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="../wwwroot/js/sound.js"></script>
-
-    <script>
-        function mostrarJuego() {
-            var menu = document.querySelector('.menu-container');
-            var juego = document.getElementById('juego');
-            menu.style.display = 'none';
-            juego.style.display = 'block';
-        }
-
-        function abrirPagina(url) {
-            window.open(url, '_blank');
-        }
-
-        
-    </script>
-
+   
 </body>
 </html>
